@@ -112,7 +112,7 @@ public class SimpleBST<K, V> implements SimpleMap<K, V> {
     } else if (order.compare(key,node.key) < 0){
         node.left = inserBstNode(node.left, key, value);
     } else if (order.compare(key,node.key) > 0){
-        node.left = inserBstNode(node.right, key, value);
+        node.right = inserBstNode(node.right, key, value);
     } else if (order.compare(key,node.key) == 0){
         this.cachedValue = node.value;
         node.value = value;
